@@ -29,7 +29,7 @@ struct MANGOS_DLL_DECL instance_trial_of_the_champion : public ScriptedInstance
 {
     instance_trial_of_the_champion(Map* pMap) : ScriptedInstance(pMap) { Initialize(); }
 
-    uint32 m_auiEncounter[MAX_ENCOUNTER+1];
+    /*uint32 m_auiEncounter[MAX_ENCOUNTER+1];
 
     std::string m_strInstData;
 
@@ -97,21 +97,22 @@ struct MANGOS_DLL_DECL instance_trial_of_the_champion : public ScriptedInstance
 		m_uiMemoryGUID			= 0;
 		m_uiArgentChallengerID		= 0;
 
-    for (uint8 i = 0; i < MAX_ENCOUNTER; ++i)
+        for (uint8 i = 0; i < MAX_ENCOUNTER; ++i)
             m_auiEncounter[i] = NOT_STARTED;
     }
 
     void OnPlayerEnter(Player *pPlayer)
     {
 
-    enum PhaseControl
-    {
-        HORDE_CONTROL_PHASE_SHIFT_1    = 55773,
-        HORDE_CONTROL_PHASE_SHIFT_2    = 60028,
-        ALLIANCE_CONTROL_PHASE_SHIFT_1 = 55774,
-        ALLIANCE_CONTROL_PHASE_SHIFT_2 = 60027,
-    };
-        if (!sWorld.getConfig(CONFIG_BOOL_ALLOW_TWO_SIDE_INTERACTION_GROUP)) return;
+        enum PhaseControl
+        {
+            HORDE_CONTROL_PHASE_SHIFT_1    = 55773,
+            HORDE_CONTROL_PHASE_SHIFT_2    = 60028,
+            ALLIANCE_CONTROL_PHASE_SHIFT_1 = 55774,
+            ALLIANCE_CONTROL_PHASE_SHIFT_2 = 60027,
+        };
+        if (!sWorld.getConfig(CONFIG_BOOL_ALLOW_TWO_SIDE_INTERACTION_GROUP)) 
+            return;
 
         switch (pPlayer->GetTeam())
         {
@@ -125,8 +126,8 @@ struct MANGOS_DLL_DECL instance_trial_of_the_champion : public ScriptedInstance
                       pPlayer->RemoveAurasDueToSpell(ALLIANCE_CONTROL_PHASE_SHIFT_1);
                   pPlayer->CastSpell(pPlayer, ALLIANCE_CONTROL_PHASE_SHIFT_2, false);
                   break;
-        };
-    };
+        }
+    }
 
     void OnCreatureCreate(Creature* pCreature)
     {
@@ -537,7 +538,7 @@ struct MANGOS_DLL_DECL instance_trial_of_the_champion : public ScriptedInstance
         }
 
         OUT_LOAD_INST_DATA_COMPLETE;
-    }
+    }*/
 };
 
 InstanceData* GetInstanceData_instance_trial_of_the_champion(Map* pMap)

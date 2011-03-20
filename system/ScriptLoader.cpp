@@ -10,6 +10,12 @@ extern void AddSC_battleground();
 //custom
 extern void AddSC_npc_arena_honor();
 extern void AddSC_mob_teleguy();
+extern void AddSC_instance_nazi_zombies();
+extern void AddSC_npc_ioc_resource();
+extern void AddSC_npc_taxi();
+extern void AddSC_npc_zombie();
+extern void AddSC_npc_zombie_guide();
+extern void AddSC_npc_buffmaster();
 
 //examples
 extern void AddSC_example_creature();
@@ -66,6 +72,13 @@ extern void AddSC_boss_nefarian();
 extern void AddSC_boss_victor_nefarius();
 extern void AddSC_deadmines();                              //deadmines
 extern void AddSC_instance_deadmines();
+extern void AddSC_boss_gilnid();  
+extern void AddSC_boss_sneed();  
+extern void AddSC_boss_sneedsshredder();  
+extern void AddSC_boss_vancleef();  
+extern void AddSC_boss_rhahkzor();  
+extern void AddSC_boss_greenskin();  
+extern void AddSC_boss_mrsmite();
 extern void AddSC_gnomeregan();                             //gnomeregan
 extern void AddSC_boss_thermaplugg();
 extern void AddSC_instance_gnomeregan();
@@ -531,6 +544,12 @@ void AddScripts()
     //custom
     AddSC_npc_arena_honor();
     AddSC_mob_teleguy();
+    AddSC_instance_nazi_zombies();
+	AddSC_npc_ioc_resource();
+	AddSC_npc_taxi();
+	AddSC_npc_zombie();
+	AddSC_npc_zombie_guide();
+	AddSC_npc_buffmaster();   
 
     //examples
     AddSC_example_creature();
@@ -587,6 +606,15 @@ void AddScripts()
     AddSC_boss_victor_nefarius();
     AddSC_deadmines();                                      //deadmines
     AddSC_instance_deadmines();
+	AddSC_instance_deadmines();
+	AddSC_boss_gilnid();  
+	AddSC_boss_sneed();  
+	AddSC_boss_sneedsshredder();  
+	AddSC_boss_vancleef();  
+	AddSC_boss_rhahkzor();  
+	AddSC_boss_greenskin();  
+	AddSC_boss_mrsmite();  
+    AddSC_gnomeregan();
     AddSC_gnomeregan();                                     //gnomeregan
     AddSC_boss_thermaplugg();
     AddSC_instance_gnomeregan();
